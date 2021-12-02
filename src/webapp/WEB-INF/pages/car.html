@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <div style="text-align: center;"><h1>Table of cars</h1></div>
+</head>
+<table width="600" border="1" rules="groups">
+    <th>
+    <th>
+        <body>
+        <p><a href="http://localhost:8080/spring_mvc_war_exploded/car?count=1">1_Car</a></p>
+        </body>
+    </th>
+    <th>
+        <body>
+        <p><a href="http://localhost:8080/spring_mvc_war_exploded/car?count=2">2_Cars</a></p>
+        </body>
+    </th>
+    <th>
+        <body>
+        <p><a href="http://localhost:8080/spring_mvc_war_exploded/car?count=3">3_Cars</a></p>
+        </body>
+    </th>
+    <th>
+        <body>
+        <p><a href="http://localhost:8080/spring_mvc_war_exploded/car?count=4">4_Cars</a></p>
+        </body>
+    </th>
+    <th>
+        <body>
+        <p><a href="http://localhost:8080/spring_mvc_war_exploded/car?count=5">5_Cars</a></p>
+        </body>
+    </th>
+    <th>
+        <body>
+        <p><a href="http://localhost:8080/spring_mvc_war_exploded/car?count>5">All_Cars</a></p>
+        </body>
+    </th>
+    </colgroup>
+</table>
+<table border="1">
+    <tr>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Engine</th>
+    </tr>
+
+    <tr th:each="car : ${cars}">
+        <td th:utext="${car.model}">model</td>
+        <td th:utext="${car.color}">color</td>
+        <td th:utext="${car.engineVolume}">engine</td>
+    </tr>
+</table>
+</body>
+<body>
+<p><a href="http://localhost:8080/spring_mvc_war_exploded/">Back</a></p>
+</body>
+</html>
